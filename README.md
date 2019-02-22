@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dsmHack/2019-team-02.svg?branch=master)](https://travis-ci.org/dsmHack/2019-team-02)
+
 # Initial Commit
 
 Barebones repo
