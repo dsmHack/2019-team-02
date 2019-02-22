@@ -1,0 +1,28 @@
+sudo: required
+language: node_js
+node_js:
+  - '10'
+cache:
+  directories:
+  - "$HOME/google-cloud-sdk/"
+env:
+  global:
+  - COMMIT=${TRAVIS_COMMIT::8}
+  - secure: Xhgr3LRz7MUuE9nlza4nOgnfUYt8Lhy/C6jW5pzJGihlBA5klfU9VYGxvptV1aALb5UbmS+HsZ9XTZPIZwiZGVLJcVPjTBHDqUuaMSa5UL50bzJv7jebjo2+sIsUluMyMo9relKaDebVLhQLPFuIrS+QZsx3Gcl9kvItq74tkaRE410dvKhokImgoPtfJJyU2bsp6fRxiEGczWvmOW7dYghrLaoo6NjHksnBllXlkkV26EzJp79DelvPhDFklIz3mroElYxagM7TXxXoeDKK775qAZbrEqUvP9hH6wOhkVe9IYgQzyf90eR3Y1pjsJHBrzNntCxQxxkpbXrCI1sG22ORhuzkQ2h9ehuQyHelLhU4/E5LcW7Vr8KCA/0mYKngVosU6ihGdnRozXKHgiSk+I24ZpjCNqKbmNk9qZ63GRBsAz+xFO8g1YngxjWb6v9Dd3+ye8BLbT+lHM+R/Qd3nvenKfgbu7Y+Rtb4GzWzxuhjNzzwbDlHRk8CzSFvMIiBYZUScuEg/A955fepAV4Hoo+5pwZxxZRA+ASgOOnEqktNzjxvVpfbfqiCuoWrN1xA1RkH1yAgOyh+urCBfstBVfdn0WIpFbNizmAomM+7CYliS0ZS8W27WqJ+Z0aNOSqud372668Qzl2AbtjS4a/o2/Shl2Rx3bYUc5ew66Zleqg=
+before_install:
+- python2 -c 'import os,sys,fcntl; flags = fcntl.fcntl(sys.stdout, fcntl.F_GETFL);
+  fcntl.fcntl(sys.stdout, fcntl.F_SETFL, flags&~os.O_NONBLOCK);'
+- docker --version
+- if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; 
+  curl https://sdk.cloud.google.com | bash; fi
+install:
+- npm install
+script:
+- npm test
+- npm run build
+deploy:
+  provider: script
+  skip_cleanup: true
+  on:
+    branch: master
+  script: bash scripts/deploy.sh
