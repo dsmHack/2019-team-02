@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "category" : "Health & Hygiene Supplies",
+            "items" : [
+                "shampoo",
+                "conditioner",
+                "deodorant",
+                "shaving cream",
+                "lotion",
+                "toothpaste",
+                "toothbrush",
+                "razor",
+                "bar soap",
+                "body wash",
+                "floss",
+                "clothing",
+                "socks",
+                "underwear",
+                "boxers",
+                "brush",
+                "wash cloth"
+            ]
+        },
+        {
+            "category": "Food",
+            "items" : ["food"]
+        },
+        {
+            "category": "Limited Supplies / Seasonal",
+            "items": [
+                "towel",
+                "toilet paper",
+                "paper towels",
+                "gloves",
+                "hat",
+                "scarf",
+                "jacket",
+                "blanket"
+            ]
+        },
+        {
+            "category": "Parenting Supplies",
+            "items": [
+                "shoes",
+                "diapers",
+                "wipes"
+            ]
+
+        }
+    ]
+}
