@@ -1,0 +1,23 @@
+{
+  "name": "ihyc-inventory",
+  "version": "1.0.0",
+  "description": "inventory management",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsmHack/2019-team-02.git"
+  },
+  "author": "DSM Hack!",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsmHack/2019-team-02/issues"
+  },
+  "homepage": "https://github.com/dsmHack/2019-team-02#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "jest": "^24.1.0"
+  }
+}
