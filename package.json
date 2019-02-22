@@ -20,24 +20,22 @@
   },
   "homepage": "https://github.com/dsmHack/2019-team-02#readme",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
+    "@babel/preset-env": "^7.3.1",
     "jest": "^24.1.0"
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "8"
-          }
+      ["@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
         }
-      ],
-      "stage-2"
+      }]
     ],
     "retainLines": true,
     "sourceMaps": "inline"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3"
   }
 }
