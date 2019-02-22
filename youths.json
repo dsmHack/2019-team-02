@@ -1,0 +1,23 @@
+{
+    "youths": [
+        {
+            "firstName": "John",
+            "lastNameInitial": "D",
+            "program": [
+                "Program 1",
+                "Program 2",
+                "Program 3",
+                "Please fill these entries in with actual program names"
+            ],
+            "dateOfBirth": "01/01/1999"
+        },
+        {
+            "firstName": "Bob",
+            "lastNameInitial": "D",
+            "program": [
+                "Program 1"
+            ],
+            "dateOfBirth": "01/01/1998"
+        }
+    ]
+}
