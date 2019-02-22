@@ -12,8 +12,9 @@ env:
 before_install:
 - python2 -c 'import os,sys,fcntl; flags = fcntl.fcntl(sys.stdout, fcntl.F_GETFL);
   fcntl.fcntl(sys.stdout, fcntl.F_SETFL, flags&~os.O_NONBLOCK);'
-- docker --version
-- if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; 
+- if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then 
+  rm -rf $HOME/google-cloud-sdk;
+  export CLOUDSDK_CORE_DISABLE_PROMPTS=1;
   curl https://sdk.cloud.google.com | bash; fi
 - openssl aes-256-cbc -K $encrypted_f6d4aa893e1e_key -iv $encrypted_f6d4aa893e1e_iv -in inventory-232504-e12283dddd40.json.enc -out inventory-232504-e12283dddd40.json -d
 install:
